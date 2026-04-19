@@ -6,7 +6,7 @@ I built it as a personal project to demonstrate agentic AI workflows, prompt eng
 
 ---
 
-## Funtionalities - What it does?
+## What it does?
 
 - Accepts a device symptom in plain language
 - Conducts a structured diagnostic conversation and will ask one targeted clarifying question at a time.
