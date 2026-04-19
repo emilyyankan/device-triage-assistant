@@ -1,0 +1,23 @@
+{
+  "report_id": "RPT-40BF4FA7",
+  "date": "2026-04-16 15:46",
+  "device": "iPhone 15 Pro",
+  "symptom_summary": "Battery only lasts 4 hours after water damage incident occurred last week.",
+  "root_cause_layer": "hardware",
+  "most_probable_cause": "Water damage to battery or charging circuitry",
+  "reproduction_steps": [
+    "Use iPhone 15 Pro normally after water exposure",
+    "Observe battery drain within 4 hours of normal usage"
+  ],
+  "diagnosis_steps_taken": [
+    "Check Battery Health in Settings > Battery > Battery Health & Charging",
+    "Examine liquid contact indicators in SIM tray and USB-C port",
+    "Monitor charging behavior for unusual heat or irregularities",
+    "Test device in safe mode to rule out software causes"
+  ],
+  "priority": "P1",
+  "priority_reason": "Water damage can worsen over time and cause additional component failures, posing risk of complete device failure",
+  "escalation_required": true,
+  "escalation_team": "Apple Store/Authorized Service Provider",
+  "recommended_resolution": "Immediate hardware inspection and potential battery/charging circuit replacement due to water damage"
+}

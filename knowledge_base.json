@@ -1,0 +1,129 @@
+[
+  {
+    "id": "iphone-black-screen",
+    "device": "iPhone",
+    "symptom": "black screen",
+    "keywords": ["black screen", "screen off", "won't turn on", "display not working", "blank screen"],
+    "causes": ["software crash", "battery depleted", "display connector loose", "hardware damage"],
+    "diagnosis_steps": [
+      "Force restart: hold Side + Volume Down for 10 seconds",
+      "Connect to power and wait 5 minutes",
+      "If screen flickers, likely display connector issue",
+      "Check for physical damage around screen edges"
+    ],
+    "escalation": "If force restart fails and device charges normally, escalate to display/logic board triage",
+    "layer": "software/hardware"
+  },
+  {
+    "id": "mac-slow-performance",
+    "device": "Mac",
+    "symptom": "running slow",
+    "keywords": ["slow", "sluggish", "spinning wheel", "beachball", "freezing", "performance"],
+    "causes": ["low storage", "too many startup items", "malware", "outdated macOS", "RAM pressure", "failing drive"],
+    "diagnosis_steps": [
+      "Check storage: Apple menu > About This Mac > Storage",
+      "Open Activity Monitor > check CPU and Memory tabs",
+      "Run First Aid in Disk Utility",
+      "Check login items: System Settings > General > Login Items",
+      "Run Apple Diagnostics: restart holding D"
+    ],
+    "escalation": "If Disk Utility reports errors that can't be repaired, escalate to drive replacement triage",
+    "layer": "software/configuration"
+  },
+  {
+    "id": "iphone-no-service",
+    "device": "iPhone",
+    "symptom": "no cellular service",
+    "keywords": ["no service", "no signal", "can't make calls", "no carrier", "searching", "SOS only"],
+    "causes": ["carrier outage", "SIM issue", "MDM profile conflict", "software bug", "modem hardware failure"],
+    "diagnosis_steps": [
+      "Toggle Airplane Mode on/off",
+      "Check carrier settings update: Settings > General > About",
+      "Remove and reseat SIM card",
+      "Reset network settings: Settings > General > Transfer or Reset > Reset Network Settings",
+      "Check if issue persists on another carrier SIM"
+    ],
+    "escalation": "If issue persists after network reset and SIM swap, escalate to modem triage",
+    "layer": "configuration/hardware"
+  },
+  {
+    "id": "mac-wont-boot",
+    "device": "Mac",
+    "symptom": "won't start up",
+    "keywords": ["won't boot", "stuck on logo", "spinning globe", "folder with question mark", "won't start", "boot loop"],
+    "causes": ["corrupted startup disk", "failed macOS update", "hardware failure", "SMC/NVRAM issue"],
+    "diagnosis_steps": [
+      "Boot into Recovery Mode: hold Cmd+R on startup (Intel) or hold Power on Apple Silicon",
+      "Run First Aid on startup disk in Disk Utility",
+      "Check for macOS reinstall option",
+      "Reset NVRAM: restart holding Cmd+Option+P+R",
+      "Run Apple Diagnostics: restart holding D"
+    ],
+    "escalation": "If Recovery Mode is inaccessible or Disk Utility reports unrepairable errors, escalate to logic board/storage triage",
+    "layer": "software/hardware"
+  },
+  {
+    "id": "apple-watch-sync",
+    "device": "Apple Watch",
+    "symptom": "not syncing with iPhone",
+    "keywords": ["not syncing", "disconnected", "can't connect", "watch not pairing", "sync failed"],
+    "causes": ["Bluetooth interference", "software mismatch", "corrupted pairing data", "watchOS bug"],
+    "diagnosis_steps": [
+      "Toggle Bluetooth off/on on iPhone",
+      "Keep devices within 1 meter of each other",
+      "Restart both iPhone and Apple Watch",
+      "Check Watch app on iPhone for pending updates",
+      "Unpair and re-pair as last resort"
+    ],
+    "escalation": "If re-pairing fails, escalate to hardware triage — possible Bluetooth antenna issue",
+    "layer": "integration/software"
+  },
+  {
+    "id": "ipad-touch-unresponsive",
+    "device": "iPad",
+    "symptom": "touchscreen not responding",
+    "keywords": ["touch not working", "screen unresponsive", "can't tap", "ghost touch", "touch issues"],
+    "causes": ["software freeze", "screen protector interference", "moisture", "digitizer failure", "MDM restriction"],
+    "diagnosis_steps": [
+      "Force restart: hold Top + Volume Up/Down",
+      "Remove screen protector if present",
+      "Dry device if moisture suspected",
+      "Test in a different app to isolate software vs hardware",
+      "Check for MDM restrictions if enterprise device"
+    ],
+    "escalation": "If touch fails after force restart and no screen protector, escalate to digitizer replacement triage",
+    "layer": "hardware/configuration"
+  },
+  {
+    "id": "mac-mdm-profile",
+    "device": "Mac",
+    "symptom": "MDM profile issues",
+    "keywords": ["MDM", "managed", "profile", "configuration profile", "enrolled", "ABM", "DEP", "enrollment failed"],
+    "causes": ["expired certificate", "network connectivity to MDM server", "incorrect enrollment token", "ABM sync issue"],
+    "diagnosis_steps": [
+      "Check profile status: System Settings > Privacy & Security > Profiles",
+      "Verify device is enrolled in Apple Business Manager",
+      "Check network connectivity to MDM server",
+      "Review MDM console for device-specific errors",
+      "Re-enroll device if profile shows error state"
+    ],
+    "escalation": "If re-enrollment fails, escalate to MDM admin team with device serial number and error logs",
+    "layer": "configuration/integration"
+  },
+  {
+    "id": "iphone-battery-drain",
+    "device": "iPhone",
+    "symptom": "battery draining fast",
+    "keywords": ["battery drain", "battery dying", "low battery", "battery life", "charges slowly", "battery health"],
+    "causes": ["background app refresh", "location services", "push notifications", "aged battery", "software bug"],
+    "diagnosis_steps": [
+      "Check battery health: Settings > Battery > Battery Health",
+      "Review battery usage by app: Settings > Battery",
+      "Disable background app refresh for heavy apps",
+      "Check location services: Settings > Privacy > Location Services",
+      "Update to latest iOS"
+    ],
+    "escalation": "If battery health below 80%, recommend battery replacement service",
+    "layer": "software/hardware"
+  }
+]

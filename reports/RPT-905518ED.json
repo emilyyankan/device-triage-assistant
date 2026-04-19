@@ -1,0 +1,24 @@
+{
+  "report_id": "RPT-905518ED",
+  "date": "2026-04-18 18:49",
+  "device": "iPhone 15 Pro",
+  "symptom_summary": "Display went completely black after dropping device, but phone still vibrates and appears powered on.",
+  "root_cause_layer": "hardware",
+  "most_probable_cause": "Internal display connection dislodged or LCD/OLED panel damaged from impact without external screen damage",
+  "reproduction_steps": [
+    "Drop iPhone 15 Pro on ground",
+    "Attempt to use device normally"
+  ],
+  "diagnosis_steps_taken": [
+    "Verified device powers on through vibration feedback",
+    "Checked for visible external damage to screen",
+    "Recommended force restart procedure",
+    "Suggested flashlight test in dark room",
+    "Recommended iTunes/Finder connectivity test"
+  ],
+  "priority": "P1",
+  "priority_reason": "Device completely unusable due to non-functional display making all visual interactions impossible",
+  "escalation_required": true,
+  "escalation_team": "Apple Store or authorized service provider hardware repair",
+  "recommended_resolution": "Professional hardware diagnosis and likely internal display component replacement required"
+}

@@ -1,0 +1,22 @@
+{
+  "report_id": "RPT-FCB16FA4",
+  "date": "2026-04-16 15:37",
+  "device": "MacBook",
+  "symptom_summary": "MacBook fails to boot after update, showing Apple logo briefly then black screen consistently.",
+  "root_cause_layer": "software",
+  "most_probable_cause": "Corrupted macOS installation or system files from failed update",
+  "reproduction_steps": [
+    "Power on MacBook",
+    "Observe Apple logo appears for few seconds",
+    "Screen goes black and remains unresponsive"
+  ],
+  "diagnosis_steps_taken": [
+    "Confirmed consistent failure pattern",
+    "Force restart attempted with same results"
+  ],
+  "priority": "P1",
+  "priority_reason": "Device completely unusable, user cannot access system or data",
+  "escalation_required": true,
+  "escalation_team": "Hardware Support",
+  "recommended_resolution": "Try Safe Mode boot, then macOS Recovery with First Aid, escalate to depot repair if Recovery Mode inaccessible"
+}
